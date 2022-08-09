@@ -1,0 +1,39 @@
+*, *::before, *::after {
+    font-family: Gotham Rounded, sans-serif;
+}
+
+[data-tab-content] {
+    display:none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #F6F6F6;
+    color: #6D7179;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background: rgba(32, 65, 58, .75);
+    border-bottom: 1px solid white;
+    color: #FFFFFF;
+    font-size: 30px;
+}
+
+.tab{
+    cursor: pointer;
+    padding: 20px;
+}
+.tab.active {
+    background: rgba(32, 65, 58, 1);
+}
+
