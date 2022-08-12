@@ -15,10 +15,10 @@
     <li data-tab-target='#spending' class="tab">Spending</li>
     <li data-tab-target='#clothes' class="tab">Clothes</li>
     <li data-tab-target='#habits' class="tab">Habits</li>
-    <li data-tab-target='#time' class="tab">Time</li>
+    <li data-tab-target='#time' class="tab">Schedule</li>
 </ul>
 
-<div class="tabcontent">
+<div class="tab-content">
     <div id="home" data-tab-content class="active">
         <h1>Home</h1>
     </div>
@@ -26,7 +26,133 @@
         <h1>This Week</h1>
     </div>
     <div id="spending" data-tab-content>
-        <h1>Spending</h1>
+        <header>
+            <h1>Add Purchase</h1>
+            <form id="new-spent">
+                <input
+                        type="text"
+                        id="new-amount-input"
+                        name="amount"
+                        placeholder="Enter Amount" />
+                <input
+                        type="text"
+                        id="new-item-input"
+                        name="item"
+                        placeholder="Enter Item"/>
+                <input
+                        type="submit"
+                        id="new-spending"
+                        placeholder="Add Task" />
+
+            </form>
+        </header>
+        <main>
+            <section class="spending-main">
+                <div id="display-purchases">
+                    <div id="button-head">
+                        <button id = 'previous-purchase' class="previous">Previous Purchases</button>
+                    </div>
+                    <div id="purchases">
+                        <div id="purchase-head">
+                            <h2>Purchases</h2>
+                        </div>
+                        <div id="purchase-body">
+                            <div class="purchase">
+                                <div class="content">
+                                    <div class="amount">
+                                        <input
+                                            type="text"
+                                            class="text"
+                                            id="purchase-amount"
+                                            name="purchase"
+                                            placeholder="$70">
+                                    </div>
+                                    <div class="item">
+                                        <input
+                                                type="text"
+                                                class="text"
+                                                id="purchase-item"
+                                                name="purchase"
+                                                placeholder="shoes">
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <button class="edit">Edit</button>
+                                </div>
+                            </div>
+                            <div class="purchase">
+                                <div class="content">
+                                    <div class="amount">
+                                        <input
+                                                type="text"
+                                                class="text"
+                                                id="purchase-amount2"
+                                                name="purchase"
+                                                placeholder="$10">
+                                    </div>
+                                    <div class="item">
+                                        <input
+                                                type="text"
+                                                class="text"
+                                                id="purchase-item2"
+                                                name="purchase"
+                                                placeholder="food">
+                                    </div>
+                                </div>
+                                <div class="actions">
+                                    <button class="edit">Edit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="goals">
+                    <div id="allowance">
+                        <h3>Weekly Allowance $</h3>
+                        <input
+                                type="text"
+                                id="allowance-amount"
+                                name="allowance-amount"
+                                placeholder="120" />
+                    </div>
+                    <div id="remaining">
+                        <h3>Remaining $</h3>
+                        <input
+                                type="text"
+                                id="remaining-amount"
+                                name="remaining-amount"
+                                placeholder="40" />
+                    </div>
+                    <div id="new-goal-button">
+                        <button id="new-goal" class="previous">New Goal</button>
+                    </div>
+                    <div id="current-goals">
+                        <div id="goal-head">
+                            <h3>Goals</h3>
+                        </div>
+                        <div class="goal-body">
+                            <div class="goal">
+                                <div class="goal-text">
+                                    <h4>40 conditioner</h4>
+                                </div>
+                                <div class="goal-delete">
+                                    <button id="delete-goal" class="delete">Delete</button>
+                                </div>
+                            </div>
+                            <div class="goal">
+                                <div class="goal-text">
+                                    <h4>10 food</h4>
+                                </div>
+                                <div class="goal-delete">
+                                    <button id="delete1" class="delete">Delete</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </main>
     </div>
     <div id="clothes" data-tab-content>
         <h1>Clothes</h1>
@@ -35,7 +161,54 @@
         <h1>Habits</h1>
     </div>
     <div id="time" data-tab-content>
-        <h1>Time</h1>
+        <header>
+            <h1>Add to Schedule</h1>
+            <form id="new-time">
+                <input
+                        type="text"
+                        id="new-time-input"
+                        name="time"
+                        placeholder="Enter Time" />
+                <input
+                        type="text"
+                        id="new-time-task-input"
+                        name="task"
+                        placeholder="Enter Task"/>
+                <input
+                        type="submit"
+                        id="new-time-task"
+                        placeholder="Add Task" />
+
+            </form>
+        </header>
+        <main>
+            <section class="time-list">
+                <div id="schedule-Head">
+                    <h2>Schedule</h2>
+                    <div class="actions">
+                        <button id = 'clear' class="clear">Clear</button>
+                    </div>
+                </div>
+
+                <div id="time-tasks">
+                    <!--<div class="task">
+                        <div class="content">
+                            <input
+                                    type="text"
+                                    class="text"
+                                    value="TASK"
+                                    readonly
+                            />
+                        </div>
+                        <div class="actions">
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </div>
+                    </div> -->
+                </div>
+            </section>
+        </main>
+
     </div>
 </div>
 

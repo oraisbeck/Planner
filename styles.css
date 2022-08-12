@@ -2,20 +2,66 @@
     font-family: Gotham Rounded, sans-serif;
 }
 
-[data-tab-content] {
-    display:none;
-}
-
-.active[data-tab-content] {
-    display: block;
-}
-
 body {
     padding: 0;
     margin: 0;
     background: #F6F6F6;
     color: #6D7179;
 }
+
+input{
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: #E7E1DF;
+    border-radius: 1rem;
+}
+
+button{
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: #E7E1DF;
+    color: #6D7179;
+    cursor:pointer;
+    border-radius: 1rem;
+}
+
+button:active{
+    opacity: 0.6;
+}
+
+header{
+    background: #BAC2AB;
+    padding: 2rem 1rem;
+    max-width: 1300px;
+    width:100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+main{
+    flex: 1 1 0;
+    padding: 2rem 1rem;
+    max-width: 1330px;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 1rem;
+}
+
+header h1{
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+/**************TABS***************/
+
+[data-tab-content] {
+    display:none;
+}
+
 
 .tabs {
     display: flex;
@@ -29,6 +75,10 @@ body {
     font-size: 30px;
 }
 
+.active[data-tab-content] {
+    display: block;
+}
+
 .tab{
     cursor: pointer;
     padding: 20px;
@@ -36,4 +86,349 @@ body {
 .tab.active {
     background: rgba(32, 65, 58, 1);
 }
+
+/****************Spending Tab*****************/
+#new-spent{
+    display: flex;
+    justify-content: space-between;
+}
+
+#new-amount-input{
+    flex: 1 1 0;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-item-input{
+    flex: 1 1 0;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-spending{
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    color: #6D7179;
+}
+
+.spending-main {
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+#display-purchases{
+    width: 930px;
+}
+
+#button-head button{
+    margin: 1.25rem 0.5rem;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    transition: 0.4s;
+}
+
+#purchases{
+    margin-top: 0;
+    padding: 1rem;
+    background: #FCE6EB;
+    border-radius: 1rem;
+}
+
+#purchases h2{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#purchase-body .purchase{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAC1C6;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#purchase-body .purchase .content{
+    display: flex;
+}
+
+#purchase-body .purchase .content .item{
+    flex: 1 1 0;
+}
+
+#purchase-body .purchase .content .text{
+    background: #EAC1C6;
+    color: #6D7179;
+    transition: 0.4s;
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+#purchase-body button{
+    background-color: #EAC1C6;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.4s;
+}
+
+
+#goals{
+    width: 400px;
+}
+
+#goals h3{
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#allowance {
+    display: flex;
+    margin-left: 4rem;
+}
+
+#remaining{
+    display: flex;
+    margin-left: 7rem;
+}
+
+#goals input {
+    width: 3rem;
+    font-size: 1.5rem;
+    font-weight: 300;
+    background: #F6F6F6;
+    margin-top: 7px;
+}
+
+#goals button{
+    margin: 1.25rem 0.5rem;
+    padding: 1rem;
+    font-weight: 400;
+    font-size: 1.25rem;
+    transition: 0.4s;
+}
+
+#new-goal-button{
+    margin-left: 8rem;
+}
+
+#current-goals{
+    margin: 1rem;
+    background: #BAC2AB;
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+#current-goals .goal{
+    display: flex;
+    justify-content: space-between;
+    background: #20413A;
+    opacity: .6;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#current-goals .goal-text h4{
+    width: 100%;
+    font-size: 1.125rem;
+    font-weight: 400;
+    padding: 0;
+    margin-top: 1rem;
+    margin-left: .6rem;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
+
+#current-goals .goal-delete button{
+    background: #20413A;
+    color:#FFFFFF;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.4s;
+}
+
+/****************Schedule Tab*****************/
+
+#new-time{
+    display: flex;
+}
+
+#new-time-input{
+    flex: 1 1 0;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-time-task-input{
+    flex: 1 1 0;
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+}
+
+#new-time-task{
+    padding: 1rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    color: #6D7179;
+}
+
+#new-time-task:active{
+    opacity: 0.6;
+}
+
+.time-list {
+    margin-top: 3rem;
+    padding: 1rem;
+    background: #FCE6EB;
+    border-radius: 1rem;
+}
+
+.time-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+#schedule-Head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#schedule-Head button{
+    background-color: #FCE6EB;
+    margin: 1.25rem 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.4s;
+}
+
+#time-tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAC1C6;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#time-tasks .task .time{
+    display: flex;
+}
+
+#time-tasks .task .time .text{
+    background: #EAC1C6;
+    color: #6D7179;
+    transition: 0.4s;
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+#time-tasks .task .content{
+    flex: 1 1 0;
+}
+
+#time-tasks .task .content .text{
+    background: #EAC1C6;
+    color: #6D7179;
+    transition: 0.4s;
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+#time-tasks .task .content .text:not(:read-only){
+    color: #000000;
+}
+
+#time-tasks .task .time .text:not(:read-only){
+    color: #000000;
+}
+
+#time-task .task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button{
+    background-color: #EAC1C6;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.4s;
+}
+
+#time-tasks .comp-task{
+    display: flex;
+    justify-content: space-between;
+    background-color: #EAC1C6;
+    opacity: .75;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#time-tasks .comp-task .content{
+    flex: 1 1 0;
+}
+
+
+#time-tasks .comp-task .content .text{
+    background: #EAC1C6;
+    color: #6D7179;
+    opacity: .75;
+    text-decoration: line-through;
+    transition: 0.4s;
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+#time-tasks .comp-task .time{
+    display: flex;
+}
+
+#time-tasks .comp-task .time .text{
+    background: #EAC1C6;
+    color: #6D7179;
+    opacity: .75;
+    text-decoration: line-through;
+    transition: 0.4s;
+    font-weight: 400;
+    font-size: 1.125rem;
+    width: 100%;
+}
+
+#time-task .comp-task .actions{
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.comp-task .actions button{
+    background-color: #EAC1C6;
+    opacity: .75;
+    margin: 0 0.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.125rem;
+    transition: 0.4s;
+}
+
+
+
 
